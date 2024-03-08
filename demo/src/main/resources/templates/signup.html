@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validate form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      
+      <div class="form-container Login-container">
+        <form th:action="@{/signup}" th:object="${user}" method="post" id="registerForm">
+          <h1>Register here</h1>
+          <div class="form-control">
+              <input type="text" th:field="*{name}" placeholder="Name" required/>
+              <small id="name-error" th:if="${#fields.hasErrors('name')}" th:errors="${user.name}" class="error"></small>
+              <span></span>
+          </div>
+          <div class="form-control">
+              <input type="email" th:field="*{email}" placeholder="Email" required/>
+              <small id="email-error" th:if="${#fields.hasErrors('email')}" th:errors="${user.email}" class="error"></small>
+              <span></span>
+          </div>
+          <div class="form-control">
+              <input type="text"  name="username"  placeholder="Username" required/>
+              <span></span>
+          </div>
+          <div class="form-control">
+              <input type="password" id="password" name="password" placeholder="Password" required/>    
+              
+          </div>
+          <div style="color:rgb(255, 0, 0); width: 300px; margin-bottom:0%;" >
+            <span id="passError" class="error" style="font-size: 8pt;"></span>
+        </div>
+          
+          <!-- <div id="passError" class="error" style="color:red; "><p></p></div> -->
+          <div id="errorMessage" style="color: red; margin-bottom: 0%;" th:if="${errorMessage}">
+            <p th:text="${errorMessage}"></p>
+        </div>
+       
+
+          <button type="submit" name="action" value="register" style="margin-bottom: 0%;">Register</button>
+          
+          <span>or use your account</span>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+              <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+      </form>
+      
+      </div>
+      <div >
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">
+                        Hello <br />
+                        friends
+                    </h1>
+                    <p>If you have an account, login here and have fun</p>
+                    <button class="ghost" id="login"><a href="login" style="color: white;">Login</a>
+                       
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+
+      
+  </body>
+  <script th:src="@{/js/login.js}"></script>
+  
+ 
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+    document.addEventListener('DOMContentLoaded', function () {
+        var errorMessageContainer = document.getElementById('errorMessage');
+        var errorParam = new URLSearchParams(window.location.search).get('error');
+
+        // Decode the errorParam to handle special characters
+        var decodedError = decodeURIComponent(errorParam);
+
+        // Log values to the console for debugging
+        console.log("Error Parameter:", errorParam);
+        console.log("Decoded Error:", decodedError);
+
+        if (decodedError && decodedError.trim() !== '') {
+            errorMessageContainer.textContent = decodedError;
+        }
+    });
+    /*]]>*/
+</script>
+
+
+
+<script>
+ // Thêm dòng này ở đầu mã JavaScript để tránh lỗi syntax
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('registerForm');
+    var pass = document.getElementById('password');
+    var passError = document.getElementById('passError');
+
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+        var password = pass.value;
+        console.log("Password from client:", password);
+
+        passError.textContent = "";
+        if(password.length < 6){
+            passError.textContent = "Mật khẩu tối thiểu 6 ký tự.";
+            return false;
+        }
+        var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+        if(!regex.test(password)){
+            passError.textContent = "Mật khẩu phải bao gồm ít nhất một chữ cái viết hoa, một chữ cái viết thường và một số.";
+            return false;
+        }
+        form.submit();
+    });
+});
+
+
+</script>
+
+</html>

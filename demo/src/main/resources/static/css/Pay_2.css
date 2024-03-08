@@ -1,0 +1,306 @@
+.body {
+    font-family: "Poppins", sans-serif;
+    overflow: auto;
+    height: auto;
+}
+
+.top_1 {
+    justify-content: center;
+    display: flex;
+}
+
+.top_1 img {
+    margin-left: -18%;
+}
+
+.text-top_1 {
+    font-size: 25px;
+    margin-left: 20%;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* medium */
+
+.medium {
+    background-color: #F0F0F0;
+    margin-top: 20px;
+}
+
+.Them {
+   margin-left: 25%;
+   padding-top: 10px;
+}
+
+.medium a {
+    display: flex;
+    text-decoration: none;
+    color:blue;
+}
+
+.text-1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.text-medium {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.medium-container {
+    height: 820px;
+}
+
+.medium-container-center {
+    background-color: #F6FAFD;
+    width: 60%;
+    height: auto;
+    margin-left: 25%;
+    padding: 25px 22px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px  rgba(0,0,0,.3);
+}
+
+.medium-container-center-1 {
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.thongtin {
+    background-color: white;
+    display: flex;
+    width: auto;
+    border-bottom: 5px solid gainsboro;
+    
+}
+
+
+.text-star {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: -40px;
+}
+
+.star {
+    margin-left: 5px;
+}
+
+.Gia {
+    margin-left: 550px;
+}
+
+.image {
+    width: 260px;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.image img {
+    border-radius: 5px;
+    height: 110px;
+    width: 220px;
+}
+
+
+.ThongTin01 a {
+    text-decoration: none;
+    color: black;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tiltle_1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: -40px;
+}
+
+.tiltle_2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.original-price {
+    color: gray;
+    font-size: 15px;
+}
+
+.discounted-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: red;
+}
+
+
+.DonHang {
+    margin-top: 25px;
+    width: auto;
+}
+
+.magiamgia {
+    margin-right: 20%;
+}
+
+.magiamgia input {
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 300px;
+}
+
+.tomtat {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.giatamtinh {
+    display: flex;
+}
+
+.tamtinh1 {
+    padding-left: 80%;
+    font-weight: 600;
+}
+
+.giamgia {
+    display: flex;
+}
+
+.giamgia2 {
+    padding-left: 80%;
+    font-weight: 600;
+    color: red;
+}
+
+.tongtien {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tong {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tong1 {
+    padding-left: 70.7%;
+    font-weight: 600;
+    font-size: 20px
+}
+
+/* medium-container-center-2 */
+
+.medium-container-center-2 {
+    margin-top: 20px;
+}
+
+.name-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.name-input input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 500px;
+}
+  
+.name-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+  
+.phone-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.phone-input input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 500px;
+}
+  
+.phone-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+
+.name-phone {
+    display: flex;
+}
+
+.email-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.email-input input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 1040px;
+}
+  
+.email-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+
+.diachi-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.diachi-input input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 1040px;
+}
+  
+.diachi-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+
+.bottom {
+    text-align: center;
+}
+
+.bottom button {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 1040px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+}

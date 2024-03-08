@@ -1,0 +1,315 @@
+body {
+    font-family: "Poppins", sans-serif;
+    overflow: auto;
+    height: auto;
+}
+
+/* Home */
+.container {
+    display: flex;
+    padding-top: 1%;
+    width: auto;
+}
+
+.logo {
+    padding-right: 5%;
+}
+
+.searchBox {
+    width: auto;
+    padding-top: 0.25%;
+    padding-left: 34%;
+}
+
+.search-container {
+    display: flex;
+    width: 280px;
+    position: relative;
+}
+
+#searchInput {
+    border-radius: 20px;
+    border-color: rgb(105, 154, 228);
+    width: 280px;
+    height: 35px;
+    text-indent: 28px;
+    flex: 1;
+}
+
+.search-container button {
+    border: none;
+    background-color: white;
+}
+
+.search-submit {
+    color: rgb(119, 119, 119);
+    position: absolute;
+    left: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-submit i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.login {
+    display: flex;
+    width: auto;
+}
+ 
+.login a {
+    text-decoration: none;
+}
+
+.active {
+    border: 0px;
+    background-color: aliceblue;
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.active-course {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.active-course p {
+    color: black;
+    margin-top: 7px;
+}
+
+.active-course p:hover {
+    color: rgb(42, 130, 245);
+}
+
+.active-course i {
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.active-course i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.cart {
+    padding: 9px 30px;
+    color: rgb(78, 78, 78);
+}
+
+.cart:hover {
+    color: rgb(42, 130, 245);
+}
+
+.account {
+    width: 200px;
+    margin-top: 7px;
+}
+
+.account-login {
+    font-size: 16px;
+    color: black;
+}
+
+.account-login:hover {
+    color: rgb(42, 130, 245);
+} 
+
+/* main */
+.container_center {
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    background-size:  cover;
+    padding-bottom: 3%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.container_text {
+    margin-left: -54%;
+    font-size: 25px;
+    margin-top: 7px;
+}
+
+.KhoaHoc {
+    background-color: white;
+    width: 1200px;
+    height: 600px;
+    margin-top: -10px;
+}
+
+.Pay {
+    margin-top: 20px;
+    margin-left: 54%;
+}
+
+.ThanhToan i {
+    margin-top: 11px;
+    margin-left: 25px;
+}
+
+.ThanhToan p {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.ThanhToan {
+    border-radius: 10px;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #0BB732;
+    color: white;
+    display: flex;
+}
+
+/* KhoaHoc_check */
+
+.checkbox .container {
+    margin-top: 25px;
+    margin-right: 15px;
+}
+
+.KhoaHoc_Check {
+    display: flex;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.checkbox {
+    transform: scale(1.5); 
+}
+
+.image {
+    width: 260px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+.image img {
+    border-radius: 5px;
+}
+
+.ThongTin01 a {
+    text-decoration: none;
+    color: black;
+    width: auto;
+}
+
+.tiltle_1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tiltle_2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.original-price {
+    color: gray;
+}
+
+.discounted-price {
+    font-weight: bold;
+}
+
+.discount {
+    color: red;
+    font-weight: bold;
+}
+
+.Pay_1 {
+    padding-left: 200px;
+}
+
+.ThanhToan_1 {
+    border: 0px;
+    border-radius: 15px;
+    background-color: #0BB732;
+    color: white;
+}
+
+.ThanhToan_1 p {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.ThanhToan_1:hover{
+    border: 1px solid #0BB732;
+    background-color: white;
+    color: #0BB732;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+/* footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content .left,
+.footer-content .center,
+.footer-content .right {
+    flex: 1;
+    text-align: left;
+}
+
+.left ul,
+.center ul,
+.right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left ul li,
+.center ul li,
+.right ul li {
+    margin-bottom: 10px;
+}
+
+.left ul li p,
+.center ul li p,
+.right ul li p {
+    margin: 0;
+}
+
+.left ul li a,
+.center ul li a,
+.right ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.center ul li a:hover,
+.right ul li a:hover {
+    text-decoration: underline;
+    color: #33F8FF;
+}
+
+.footer .text_1 {
+    color: #33F8FF;
+    font-size: 24px;
+    font-weight: bold;
+}

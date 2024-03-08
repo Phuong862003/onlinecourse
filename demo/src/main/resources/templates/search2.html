@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Home.css}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    crossorigin="anonymous"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    />
+    <script>
+      function findBook() {
+            let keywordInput = document.querySelector(".input100");
+            let keyword = keywordInput.value;
+            window.location = "/search?keyword=" + keyword;
+        }
+  </script>
+    
+</head>
+<body>
+  <div class="home-menutop">
+      <div class="container">
+        <div class="logo">
+          <a href="" class="logo-top">
+            <img src="/img/logo.PNG" alt="" class="logo">
+          </a>
+        </div>
+        <div class="searchBox">
+          <form id="searchForm" action="/search" method="get">
+            <div class="search-container">
+                <input class="input100" type="text" id="searchInput" name="keyword" placeholder="Tìm khóa học, giảng viên...">
+                <button type="submit" class="timkiem"  onclick="findBook()">
+                  <a href="" class="search-submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </a>
+                </button>
+            </div>
+          </form>
+        </div>
+        <div class="login">
+          <div class="active">
+            <a href="" class="active-course">
+              <p class="hidden-xs hiden-sm">Kích hoạt khóa học</p>
+              <i class="fa-solid fa-unlock"></i>
+            </a>
+          </div>
+          <a href="" class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <div class="account">
+            <a href="login" class="account-login">
+              <p class="">Đăng nhập</p>
+            </a>
+          </div>
+        </div>
+      </div>      
+  </div>
+  <div class="carousel">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/advertising01.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/advertising02.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/advertising03.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="menu-container">
+      <div class="menu">
+        <ul>
+          <li class="menu-item"><a href="" class="item">Ngoại ngữ</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả ngoại ngữ</li></a>
+              <a href="" class="item"><li>Tiếng Hàn</li></a>
+              <a href="" class="item"><li>Tiếng Đức</li></a>
+              <a href="" class="item"><li>Tiếng Trung</li></a>
+              <a href="" class="item"><li>Tiếng Nhật</li></a>
+              <a href="" class="item"><li>Tiếng Anh</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Marketing</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Marketting</li></a>
+              <a href="" class="item"><li>Facebook Marketing</li></a>
+              <a href="" class="item"><li>Zalo Marketing</li></a>
+              <a href="" class="item"><li>Email Marketing</li></a>
+              <a href="" class="item"><li>Google ads</li></a>
+              <a href="" class="item"><li>Seo</li></a>
+              <a href="" class="item"><li>Youtube Marketing</li></a>
+              <a href="" class="item"><li>Content Marketing</li></a>
+              <a href="" class="item"><li>Video Marketing</li></a>
+              <a href="" class="item"><li>Affiliate Marketing</li></a>
+              <a href="" class="item"><li>Marketing online</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Tin học văn phòng</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả tin học văn phòng</li></a>
+              <a href="" class="item"><li>Excel</li></a>
+              <a href="" class="item"><li>Word</li></a>
+              <a href="" class="item"><li>IC3</li></a>
+              <a href="" class="item"><li>Google sheets</li></a>
+              <a href="" class="item"><li>PowerPoint</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Kinh doanh & Khởi nghiệp</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Kinh doanh & Khởi nghiệp</li></a>
+              <a href="" class="item"><li>Quản trị kinh doanh</li></a>
+              <a href="" class="item"><li>Startup</li></a>
+              <a href="" class="item"><li>Hành chính nhân sự</li></a>
+              <a href="" class="item"><li>Bất động sản</li></a>
+              <a href="" class="item"><li>Kinh doanh online</li></a>
+              <a href="" class="item"><li>Dropshipping</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Tài chính & Kế toán</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Tài chính & Kế toán</li></a>
+              <a href="" class="item"><li>Kế toán</li></a>
+              <a href="" class="item"><li>Tài chính</li></a>
+              <a href="" class="item"><li>Chứng khoán</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Sales Bán hàng</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Sales Bán hàng</li></a>
+              <a href="" class="item"><li>Bán hàng online</li></a>
+              <a href="" class="item"><li>Telesales</li></a>
+              <a href="" class="item"><li>Bán hàng livestream</li></a>
+              <a href="" class="item"><li>Chăm sóc khách hàng</li></a>
+              <a href="" class="item"><li>Chiến lược bán hàng</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Thiết kế & Xây dựng</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Thiết kế & Xây dựng</li></a>
+              <a href="" class="item"><li>Thiết kế quảng cáo</li></a>
+              <a href="" class="item"><li>Thiết kế Web</li></a>
+              <a href="" class="item"><li>Photoshop</li></a>
+              <a href="" class="item"><li>Autocad</li></a>
+              <a href="" class="item"><li>3DSmax</li></a>
+              <a href="" class="item"><li>Dự án-Xây dựng</li></a>
+              <a href="" class="item"><li>Kiến trúc, nội thất</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Kỹ năng</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Kỹ năng</li></a>
+              <a href="" class="item"><li>Kỹ năng lãnh đạo</li></a>
+              <a href="" class="item"><li>Kỹ năng phần mềm</li></a>
+              <a href="" class="item"><li>Phát triển bản thân</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Công nghệ</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Công nghệ</li></a>
+              <a href="" class="item"><li>Dữ liệu </li></a>
+              <a href="" class="item"><li>Công nghệ thông tin</li></a>
+              <a href="" class="item"><li>Sửa chữa chế tạo</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Sức khỏe & Làm đẹp</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Sức khỏe & Làm đẹo</li></a>
+              <a href="" class="item"><li>Giảm cân</li></a>
+              <a href="" class="item"><li>Yoga-Thiền</li></a>
+              <a href="" class="item"><li>Giảm stress</li></a>
+              <a href="" class="item"><li>Massage-Trị liệu</li></a>
+              <a href="" class="item"><li>Fitness-Gym</li></a>
+              <a href="" class="item"><li>Khí công</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Phong cách sống</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Phong cách sống</li></a>
+              <a href="" class="item"><li>Pha chế</li></a>
+              <a href="" class="item"><li>Làm bánh</li></a>
+              <a href="" class="item"><li>Handmade</li></a>
+              <a href="" class="item"><li>Tử vi</li></a>
+              <a href="" class="item"><li>Ảo thuật</li></a>
+              <a href="" class="item"><li>Âm nhạc</li></a>
+              <a href="" class="item"><li>Ẩm thực-Nấu ăn</li></a>
+              <a href="" class="item"><li>Nhảy</li></a>
+              <a href="" class="item"><li>Hội họa</li></a>
+              <a href="" class="item"><li>Thể thao</li></a>
+              <a href="" class="item"><li>Nhiếp ảnh, dựng phim</li></a>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="" class="item">Tình yêu - Hôn nhân & gia đình</a>
+            <ul class="submenu">
+              <a href="" class="item"><li>Tất cả Tình yêu-Hôn nhân & Gia đình</li></a>
+              <a href="" class="item"><li>Nuôi dạy con</li></a>
+              <a href="" class="item"><li>Mang thai</li></a>
+              <a href="" class="item"><li>Chăm sóc trẻ</li></a>
+              <a href="" class="item"><li>Tình yêu</li></a>
+              <a href="" class="item"><li>Hạnh phúc gia đình</li></a>
+              <a href="" class="item"><li>Đời sống vợ chồng</li></a>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div class="selling" >
+    <div class="selling-top">
+      <p>KẾT QUẢ TÌM KIẾM</p>
+    </div>
+    <div class="courses-main" style="display: flex;flex-wrap: wrap;  margin-left: 70px;">
+        <div class="course-container" th:each="course : ${course}" style="width: 300px;margin-bottom: 10px;">
+            <div class="course-01" style="height: 330px">
+                <div class="course-info">
+                    <div class="image">
+                        <img th:src="@{${course.image}}" alt="">
+                    </div>
+                    <div class="information">
+                      <div class="text-name">
+                        <p><span th:text="${course.teacher}"></span></p>
+                        <p class="VND"><del th:text="${course.priceOri}">₫</del></p>
+                      </div>
+                      <div class="money">
+                          <span style="color: orange;">★★★★★</span>
+                          <span>(621)</span>
+                          <p class="VND"><span th:text="${course.price}"></span>₫</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+  <div class="target">
+    <div class="target-top">
+      <p>CHINH PHỤC MỤC TIÊU CỦA BẠN</p>
+    </div>
+    <div class="target-main">
+      <div class="target-container">
+        <div class="target-text">
+          <div class="title">
+            <a href="" class="bgr1"><img src="./image/icon01.png" alt=""></a>
+            <div class="text-item">
+              <a href="" class="bgr1">
+                <p class="target-text-1">Đầu tư chứng khoán chuyên nghiệp Đăng Trọng Khang</p>
+                <p class="target-text-2">5 khóa học</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="target-container01">
+        <div class="target-text">
+          <div class="title">
+            <a href="" class="bgr1"><img src="./image/icon02.png" alt=""></a>
+            <div class="text-item">
+              <a href="" class="bgr1">
+                <p class="target-text-1">Combo marketing online</p>
+                <p class="target-text-2">6 khóa học</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
+<script src="Home.js"></script>
+</html>

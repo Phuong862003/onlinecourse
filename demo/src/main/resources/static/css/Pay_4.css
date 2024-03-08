@@ -1,0 +1,45 @@
+.top_1 {
+    margin-left: 25%;
+}
+
+.medium {
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+}
+
+.container {
+   text-align: center; 
+}
+
+.arigatou {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+
+.Quaylai {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 220px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+}
+
+.TroVeTrangChu {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 220px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+    margin-left: 15px;
+}

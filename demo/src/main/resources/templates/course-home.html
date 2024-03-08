@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ad-home.css}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script>
+    function findBook() {
+      let keywordInput = document.querySelector(".input100");
+      let keyword = keywordInput.value;
+      window.location.href = "/search?keyword=" + keyword;
+    }
+
+</script>
+</head>
+<body>
+    <div class="home-menutop">
+        <div class="container">
+          <div class="logo">
+            <a href="" class="logo-top">
+              <img src="/img/logo.PNG" alt="" class="logo">
+            </a>
+          </div>
+          <div class="searchBox">
+            <form id="searchForm"  method="get">
+              <div class="search-container">
+                  <input class="input100" type="text" id="searchInput" name="keyword" placeholder="Tìm khóa học, giảng viên...">
+                  <button type="submit" class="timkiem"  onclick="findBook()">
+                    <a href="" class="search-submit">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                  </button>
+              </div>
+            </form>
+          </div>
+          <div class="login">
+            <div class="active">
+              <a href="" class="active-course">
+                <p class="hidden-xs hiden-sm">Kích hoạt khóa học</p>
+                <i class="fa-solid fa-unlock"></i>
+              </a>
+            </div>
+            <a href="" class="cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <div class="account">
+              <a href="" class="account-login">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+              <div class="submenu" style="border: 1px solid black; ">
+                <a href="" class="menu">
+                  <p><i class="fa-solid fa-book"></i> Khóa học</p>
+                  <p><i class="fa-solid fa-users"></i> Hội viên</p>
+                  <p><i class="fa-solid fa-book-open-reader"></i>Người dùng</p>
+                  <a th:href="@{/}"><p><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</p></a>
+                </a>
+              </div>
+            </div>
+           
+          </div>
+        </div>      
+    </div>
+    <div class="giua1">
+      <div class="menu-container">
+        <div class="left">
+          <button class="toggle"><span class="fas fa-bars"></span></button>
+          <div class="menu-wrapper">
+            <div class="vertical-menu">
+              <ul>
+                <!-- Inside the vertical-menu in ad-home.html -->
+              
+                <!-- <li><a href=""><div class="button-home" ><i class="fa-solid fa-house"></i>Home</a></div></li>
+                <li><a href="/course-home"><div class="button-course" ><i class="fa-solid fa-book"></i>Course</div></a></li>
+                <li><a href="#"><div class="button-member" ><i class="fa-solid fa-book-open-reader"></i>Member</a></div></li>
+                <li><a href="#"><div class="button-user" ><i class="fa-solid fa-users"></i>User</a></div></li> -->
+              
+                <a th:href="@{/ad-home}" class="button-home" style="text-decoration: none; color: inherit;">
+                  <div><i class="fa-solid fa-house"></i>Home</div>
+              </a>
+              
+              
+
+              <a th:href="@{/course-home}" class="button-home" style="text-decoration: none; color: inherit;">
+                <div><i class="fa-solid fa-book"></i>Course</div>
+              </a>
+            
+              
+              <a th:href="@{/member-home}" class="button-member" style="text-decoration: none; color: inherit;">
+                  <div><i class="fa-solid fa-book-open-reader"></i>Member</div>
+              </a>
+              
+              <a href="#" class="button-user" style="text-decoration: none; color: inherit;">
+                  <div><i class="fa-solid fa-users"></i>User</div>
+              </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="" id="courseContent">
+          <div class="name-top">
+            <!-- <p class="text1">Course</p> -->
+            <a th:href="@{/ad-home/new}"><button class="New" id="addCourseButton" style="margin-left: 1300px;"><i class="fa-solid fa-plus"></i></button></a>
+          </div>
+          <div class="container2" style="display: flex; flex-wrap: wrap; margin-left: 300px;" >
+            <div class="course-container" th:each="course: ${courses}" th:if="${course != null}">
+                <div class="course-01" style="height: 350px">
+                    <div class="course-info" style="width: 300px; margin-bottom: 10px;" th:if="${course != null}">
+                        <div class="image">
+                            <img th:src="${course.image}" alt="Course Image" th:if="${course.image != null}" />
+                        </div>
+                        <div class="information">
+                            <h5><span th:text="${course.name}"></span></h5>
+                            <div class="text-name">
+                                <p><span th:text="${course.teacher}"></span></p>
+                                <p class="VND"><del th:text="${course.priceOri}">₫</del></p>
+                            </div>
+                            <div class="money">
+                                <span style="color: orange;">★★★★★</span>
+                                <span>(621)</span>
+                                <p class="VND"><span th:text="${course.price}"></span>₫</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="Pay_1">
+                  <a th:href="@{/ad-home/edit/{id}(id=${course.id})}" style="text-decoration: none; color: inherit; "><button class="Sua" id="editCourseButton"><i class="fa-solid fa-pen-to-square"></i><p class="text_sua">Sửa</p></button></a>
+                  <a th:href="@{/ad-home/{id}(id=${course.id})}" style="text-decoration: none; color: inherit;"><button class="Xoa"><i class="fa-solid fa-trash"></i><p class="text-xoa">Xóa</p></button></a>
+                </div>
+             
+        </div>
+        
+        </div>
+    </div>
+</body>
+<script th:src="@{/js/ad-home.js}"></script>
+<script th:src="@{/js/course-home.js}"></script>
+<script th:src="@{/js/right.js}"></script>
+
+</html>
