@@ -70,7 +70,7 @@
     <div class="container">
       <h1>Chỉnh sửa thông tin sản phẩm</h1>
 
-      <form th:action="@{/member-home}" th:object="${user}" method="POST">
+      <form th:action="@{/member-home/{id}(id=${user.id})}" th:object="${user}" method="POST">
         <!-- <div class="form-group">
           <label>Products_ID</label>
           <input

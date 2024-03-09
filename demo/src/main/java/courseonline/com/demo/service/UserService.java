@@ -1,6 +1,7 @@
 package courseonline.com.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import courseonline.com.demo.enity.User;
 import courseonline.com.demo.enity.UserDto;
 import courseonline.com.demo.respository.LoginRespostory;
 import courseonline.com.demo.respository.UserRepository;
+import jakarta.transaction.Transactional;
 
 @Service
 public class UserService {
@@ -65,8 +67,26 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+    @Transactional
     public User updateUser(User user){
-        return userRepository.save(user);
+        // Kiểm tra xem user đã tồn tại trong cơ sở dữ liệu chưa
+        Optional<User> existingUser = userRepository.findById(user.getId());
+        
+        if (existingUser.isPresent()) {
+            // Lấy ra user hiện tại từ cơ sở dữ liệu
+            User currentUser = existingUser.get();
+
+            // Cập nhật thông tin từ user mới vào user hiện tại
+            currentUser.setName(user.getName());
+            currentUser.setEmail(user.getEmail());
+            // Thêm các thông tin khác cần cập nhật
+
+            // Lưu lại user đã cập nhật
+            return userRepository.save(currentUser);
+        } else {
+            // Trả về null hoặc throw exception tùy theo logic ứng dụng của bạn
+            return null;
+        }
     }
 
     public static boolean isNotBlank(String str) {

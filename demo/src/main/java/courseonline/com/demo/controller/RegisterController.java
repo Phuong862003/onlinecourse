@@ -55,12 +55,7 @@ public class RegisterController {
         return "member-home";
     }
 
-    @GetMapping("/member-home/new")
-    public String createMember(Model model){
-        User user = new User();
-        model.addAttribute("user", user);
-        return "create_member";
-    }
+
 
     @PostMapping("/member-home")
     public String saveMember(@ModelAttribute("user") User user) {
@@ -76,17 +71,30 @@ public class RegisterController {
     }
     
     @PostMapping("/member-home/{id}")
-    public String updateUser(@PathVariable int id,@ModelAttribute("user") User user, Model model){
-        User exUser = userService.getUserById(id);
-        // Login exLogin = loginService.getById(id);
-        exUser.setId(id);
-        exUser.setImage(user.getImage());
-        exUser.setName(user.getName());
-        exUser.setEmail(user.getEmail());
-        
-        userService.saveUser(exUser);
-        return "redirect:/course-home";
+public String updateUser(@PathVariable int id, @ModelAttribute("user") User updatedUser, Model model) {
+    // Lấy User cần cập nhật từ cơ sở dữ liệu
+    User existingUser = userService.getUserById(id);
+
+    // Kiểm tra xem User có tồn tại không
+    if (existingUser != null) {
+        // Cập nhật thông tin của User từ dữ liệu mới
+        existingUser.setImage(updatedUser.getImage());
+        existingUser.setLogin(updatedUser.getLogin());
+        existingUser.setName(updatedUser.getName());
+        existingUser.setEmail(updatedUser.getEmail());
+
+        // Lưu User đã cập nhật vào cơ sở dữ liệu
+        userService.updateUser(existingUser);
+    } else {
+        // Xử lý trường hợp không tìm thấy User
+        // Có thể thông báo lỗi hoặc thực hiện xử lý phù hợp
+        // ở đây bạn có thể redirect hoặc trả về trang lỗi
     }
+
+    return "redirect:/member-home";
+}
+
+    
 
     @GetMapping("/member-home/{id}")
     public String deleteMember(@PathVariable int id){

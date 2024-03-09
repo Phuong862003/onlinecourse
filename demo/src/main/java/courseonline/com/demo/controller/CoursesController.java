@@ -173,7 +173,7 @@ public class CoursesController {
         exCourse.setTeacher(course.getTeacher());
         exCourse.setDescription(course.getDescription());
 
-        coursesService.saveScrapedData(exCourse);
+        coursesService.updateCourse(exCourse);
         return "redirect:/course-home";
     }
 
