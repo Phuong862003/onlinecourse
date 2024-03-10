@@ -19,6 +19,7 @@
     crossorigin="anonymous"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
     />
+   
 </head>
 <body>
     <div class="home-menutop">
@@ -57,11 +58,29 @@
             <div id="successDot" style="display: none; color: red;">•</div>
 
             
-            <div class="account">
-              <a href="login" class="account-login">
-                <p class="">Đăng xuất</p>
+            <div class="cart">
+              <a th:href="@{/personal/{userId}(userId=${login.id})}" class="account-login">
+                <i class="fa-solid fa-circle-user fa-lg" style="width: 50px;;"></i>
               </a>
             </div>
+            <div class="account"  style="height: 50px; width: 50px;" >
+              <a th:href="@{/}" class="account-login" >
+                <i class='bx bx-log-out' style="font-size: 25px;"></i>
+              </a>
+            </div>
+            <!-- <div class="account">
+              <a href="" class="account-login">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+              <div class="submenu" >
+                <a href="" class="menu">
+                  <p><i class="fa-solid fa-book"></i> Khóa học</p>
+                  <p><i class="fa-solid fa-users"></i> Hội viên</p>
+                  <p><i class="fa-solid fa-book-open-reader"></i>Người dùng</p>
+                  <a th:href="@{/}"><p><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</p></a>
+                </a>
+              </div>
+            </div> -->
           </div> 
     </div>
     <div class="course-hightlight">
@@ -81,33 +100,56 @@
     </div>
     <div class="content">
       <div class="content_container">
-        <div class="content_container_1">
+        <div class="content_container_1" style="border: 1px solid black; margin-right: 350px;">
           <div class="img1"><img th:src="${course.image}" alt="" th:if="${course.image != null}"></div>
         </div>
         
         <div class="content_container_2" >
           <div class="dangkyhoc">
-            <span class="VND1" th:text="${course.price}"></span>
-            <span class="VND2" ><del th:text="${course.priceOri}"></del></span>
-            <span class="VND3">Tiết kiệm: </span>
-            <span class="VND4">30%</span>
-            <div class="submit">
-              <!-- <button class="sub1" type="submit" name="" id="">ĐĂNG KÝ NGAY</button> -->
-              <form id="addToCartForm" th:action="@{/Pay_2/{userId}/{courseId}(userId=${login.id},courseId=${course.id})}" >
-                <input type="hidden" name="loginID" id="loginIDInput" value="${user.id}" />
-                <input type="hidden" name="courseID" id="courseIDInput" value="${course.id}" />
-                <input type="hidden" name="count" id="countInput" value="1" />
-                <button class="sub1" type="submit" name="" id="">ĐĂNG KÝ NGAY</button>
-            </form>
-              <form id="addToCartForm" th:action="@{/Course2/{userId}/{courseId}(userId=${login.id},courseId=${course.id})}" method="post">
-                <input type="hidden" name="loginID" id="loginIDInput" value="${user.id}" />
-                <input type="hidden" name="courseID" id="courseIDInput" value="${course.id}" />
-                <input type="hidden" name="count" id="countInput" value="1" />
-                <button class="sub2" type="submit">THÊM VÀO GIỎ HÀNG</button>
-            </form>
-            </div>
+              <span class="VND1" th:text="${course.price}"></span>
+              <span class="VND2" ><del th:text="${course.priceOri}"></del></span>
+              <span class="VND3">Tiết kiệm: </span>
+              <span class="VND4">30%</span>
+              <div class="submit">
+                  <form id="addToCartForm" th:action="@{/Pay_2/{userId}/{courseId}(userId=${login.id},courseId=${course.id})}">
+                      <input type="hidden" name="loginID" id="loginIDInput" value="${user.id}" />
+                      <input type="hidden" name="courseID" id="courseIDInput" value="${course.id}" />
+                      <input type="hidden" name="count" id="countInput" value="1" />
+                      <button class="sub1" type="submit" name="" id="">ĐĂNG KÝ NGAY</button>
+                  </form>
+                  <form id="addToCartForm" th:action="@{/Course2/{userId}/{courseId}(userId=${login.id},courseId=${course.id})}" method="post">
+                      <input type="hidden" name="loginID" id="loginIDInput" value="${user.id}" />
+                      <input type="hidden" name="courseID" id="courseIDInput" value="${course.id}" />
+                      <input type="hidden" name="count" id="countInput" value="1" />
+                      <button class="sub2" type="submit">THÊM VÀO GIỎ HÀNG</button>
+                  </form>
+      
+                 
+                  <div class="py-3" style="border-top: 1px solid #fff;">
+                      <p  style="color: black;">Đăng ký cho doanh nghiệp</p>
+                      <p style="width: 350px;">Giúp nhân viên của bạn truy cập không giới hạn 450 khoá học, mọi lúc, mọi nơi</p>
+      
+                      <a href="https://business.gitiho.com/?utm_source=Gitiho&amp;utm_campaign=Button_Course_Gbiz" >
+                        <button style="border: 1px solid gray; background-color: #fff; width: 300px; height: 40px; border-radius: 20px;">Tư vấn cho doanh nghiệp</button>
+
+                      </a>
+                  </div>
+                  <div style="margin-top: 30px;">
+                    <i class='bx bx-money'> Hoàn tiền nếu không hài lòng</i>
+                    <hr style="color: gray; margin: 0 auto;width: 300px; margin-top: 20px; margin-bottom: 15px;">
+                    <i class='bx bxs-videos' > 107 bài giảng, 8 giờ học</i>
+                    <hr style="color: gray; margin: 0 auto;width: 300px; margin-top: 20px;  margin-bottom: 15px;">
+                    <i class='bx bx-wifi'> Học online, mọi lúc mọi nơi</i>
+                    <hr style="color: gray; margin: 0 auto;width: 300px; margin-top: 20px;  margin-bottom: 15px;">
+                    <i class='bx bxs-slideshow' > Học trên máy tính, điện thoại</i>
+                    <hr style="color: gray; margin: 0 auto;width: 300px; margin-top: 20px;  margin-bottom: 15px;">
+                    <i class='bx bxs-book-alt' > Sở hữu khóa học trọn đời</i>
+                    <hr style="color: gray; margin: 0 auto;width: 350px; margin-top: 20px;  margin-bottom: 15px;">
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
       </div>
     </div>
     <div class="main-content" style="margin-top: 100px; margin-left: 50px; width: 70%;">
@@ -164,10 +206,28 @@
         });
     });
 });
+  
 
 </script>
 
+<script>
+  var element = document.querySelector('.content_container_2');
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+
+    // Thay đổi thuộc tính position khi cuộn trang xuống
+    if (scrollPosition > 0) {
+        element.style.position = 'fixed';
+        element.style.top = '0';
+    } else {
+        element.style.position = 'absolute';
+        element.style.top = 'auto';
+    }
+});
 
 
+</script>
 
+<script th:src="@{/js/ad-home.js}"></script>
 </html>

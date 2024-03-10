@@ -69,24 +69,7 @@ public class UserService {
 
     @Transactional
     public User updateUser(User user){
-        // Kiểm tra xem user đã tồn tại trong cơ sở dữ liệu chưa
-        Optional<User> existingUser = userRepository.findById(user.getId());
-        
-        if (existingUser.isPresent()) {
-            // Lấy ra user hiện tại từ cơ sở dữ liệu
-            User currentUser = existingUser.get();
-
-            // Cập nhật thông tin từ user mới vào user hiện tại
-            currentUser.setName(user.getName());
-            currentUser.setEmail(user.getEmail());
-            // Thêm các thông tin khác cần cập nhật
-
-            // Lưu lại user đã cập nhật
-            return userRepository.save(currentUser);
-        } else {
-            // Trả về null hoặc throw exception tùy theo logic ứng dụng của bạn
-            return null;
-        }
+        return userRepository.save(user);
     }
 
     public static boolean isNotBlank(String str) {

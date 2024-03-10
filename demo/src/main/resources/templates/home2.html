@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/Home.css}" />
+    <link rel="stylesheet" th:href="@{https://unpkg.com/boxicons@latest/css/boxicons.min.css}"/>
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -50,14 +52,14 @@
           <a th:href="@{/Shopping/{userId}(userId=${login.id})}" class="cart">
             <i class="fa-solid fa-cart-shopping"></i>
           </a>
-          <div class="cart">
+          <div class="cart" style=" width: 50px;">
             <a th:href="@{/personal/{userId}(userId=${login.id})}" class="account-login">
               <i class="fa-solid fa-circle-user fa-lg" style="width: 50px;;"></i>
             </a>
           </div>
-          <div class="account">
-            <a th:href="@{/}" class="account-login">
-              <p class="">Đăng xuất</p>
+          <div class="account"  style="height: 50px; width: 50px;" >
+            <a th:href="@{/}" class="account-login" >
+              <i class='bx bx-log-out' style="font-size: 25px;"></i>
             </a>
           </div>
         </div>
