@@ -117,16 +117,7 @@ public class CoursesController {
 
     @GetMapping("/ad-home")
     public String search_Course(@RequestParam(name="keyword", required = false) String keyword, Model model){
-        // CompletableFuture<List<ScrapedData>> scrapingFuture = CompletableFuture.supplyAsync(() -> {
-        //     return webScrapingService.scrapeCourses("https://gitiho.com/categories/tat-ca-khoa-hoc");
-        // });
-
-        // CompletableFuture<Void> processingFuture = scrapingFuture.thenAccept(courses -> {
-        //     model.addAttribute("courses", courses);
-        // });
-
-        // // Đợi cả hai CompletableFuture hoàn thành
-        // CompletableFuture.allOf(scrapingFuture, processingFuture).join();
+       
         List<ScrapedData> courses = searchService.search(keyword);
         model.addAttribute("course", courses);
         model.addAttribute("keyword", keyword != null ? keyword : "");

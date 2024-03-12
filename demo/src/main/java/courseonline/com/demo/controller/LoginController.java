@@ -74,7 +74,7 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
 
         if ("login".equals(action)) {
-            // Handle login
+            
             Login oauthUser = userService.login(user.getUsername(), user.getPassword());
 
             if (Objects.nonNull(oauthUser)) {
@@ -90,7 +90,7 @@ public class LoginController {
             }
         } 
         else {
-            // Handle other cases or set default behavior
+            
             modelAndView.setViewName("redirect:/login");
         }
 
@@ -115,7 +115,7 @@ public class LoginController {
             model.addAttribute("courses", courses);
         });
 
-        // Đợi cả hai CompletableFuture hoàn thành
+        
         CompletableFuture.allOf(scrapingFuture, processingFuture).join();
         return "home2";
         
