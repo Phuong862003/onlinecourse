@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Pay_4.css}" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    crossorigin="anonymous"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    />
+</head>
+<body>
+    <div class="top">
+        <div class="top_1">
+            <a href="" class="home"><img src="/img/logo.PNG" alt=""></a>
+        </div>
+    </div>
+    <div class="medium">
+        <div class="container">
+            <img src="/img/arigatou.jpg" alt="">
+            <p class="arigatou">Cảm ơn bạn đã sử dụng web của chúng tôi.</p>
+        </div>
+        <div class="bottom">
+            <button class="Quaylai" type="submit" id="quaylai" ><a th:href="@{/Pay_2/{userId}/{courseId}(userId=${login.id},courseId=${course.id})}" style="text-decoration: none;">Quay lại</a></button>
+            <button class="TroVeTrangChu" type="submit" id="home"><a th:href="@{/home2/{userId}(userId=${login.id})}" style="text-decoration: none;">Trở về trang chủ</a></button>
+            <!-- <form id="addToCartForm" th:action="@{/Pay_2/{userId}/{courseId}(userId=${login.id},courseId=${course.id})}" method="post">
+                <input type="hidden" name="loginID" id="loginIDInput" value="${user.id}" />
+                <input type="hidden" name="courseID" id="courseIDInput" value="${course.id}" />
+                <button class="Quaylai" type="submit" id="quaylai" >Quay lại</button>
+            </form> -->
+            <!-- <form id="addToCartForm" th:action="@{/home2/{userId}(userId=${login.id})}" method="post">
+                <input type="hidden" name="loginID" id="loginIDInput" value="${user.id}" />   
+                <button class="TroVeTrangChu" type="submit" id="home">Trở về trang chủ</button>
+            </form> -->
+        </div>
+    </div>
+</body>
+
+</html>

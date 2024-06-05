@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ad-home.css}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script>
+    function findBook() {
+      let keywordInput = document.querySelector(".input100");
+      let keyword = keywordInput.value;
+      window.location.href = "/search?keyword=" + keyword;
+    }
+
+</script>
+</head>
+<body>
+    <div class="home-menutop">
+        <div class="container">
+          <div class="logo">
+            <a href="" class="logo-top">
+              <img src="/img/logo.PNG" alt="" class="logo">
+            </a>
+          </div>
+          <div class="searchBox">
+            <form id="searchForm"  method="get">
+              <div class="search-container">
+                  <input class="input100" type="text" id="searchInput" name="keyword" placeholder="Tìm khóa học, giảng viên...">
+                  <button type="submit" class="timkiem"  onclick="findBook()">
+                    <a href="" class="search-submit">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                  </button>
+              </div>
+            </form>
+          </div>
+          <div class="login">
+            <div class="active">
+              <a href="" class="active-course">
+                <p class="hidden-xs hiden-sm">Kích hoạt khóa học</p>
+                <i class="fa-solid fa-unlock"></i>
+              </a>
+            </div>
+            <a href="" class="cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <div class="account">
+              <a href="" class="account-login">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+              <div class="submenu" style="border: 1px solid black; ">
+                <a href="" class="menu">
+                  <p><i class="fa-solid fa-book"></i> Khóa học</p>
+                  <p><i class="fa-solid fa-users"></i> Hội viên</p>
+                  <p><i class="fa-solid fa-book-open-reader"></i>Người dùng</p>
+                  <a th:href="@{/}"><p><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</p></a>
+                </a>
+              </div>
+            </div>
+           
+          </div>
+        </div>      
+    </div>
+    <div class="giua1">
+      <div class="menu-container">
+        <div class="left">
+          <button class="toggle"><span class="fas fa-bars"></span></button>
+          <div class="menu-wrapper">
+            <div class="vertical-menu">
+              <ul>
+                <!-- Inside the vertical-menu in ad-home.html -->
+              
+                <!-- <li><a href=""><div class="button-home" ><i class="fa-solid fa-house"></i>Home</a></div></li>
+                <li><a href="/course-home"><div class="button-course" ><i class="fa-solid fa-book"></i>Course</div></a></li>
+                <li><a href="#"><div class="button-member" ><i class="fa-solid fa-book-open-reader"></i>Member</a></div></li>
+                <li><a href="#"><div class="button-user" ><i class="fa-solid fa-users"></i>User</a></div></li> -->
+              
+                <a th:href="@{/ad-home}" class="button-home" style="text-decoration: none; color: inherit;">
+                  <div><i class="fa-solid fa-house"></i>Home</div>
+              </a>
+              
+              
+
+              <a th:href="@{/course-home}" class="button-home" style="text-decoration: none; color: inherit;">
+                <div><i class="fa-solid fa-book"></i>Course</div>
+              </a>
+            
+              
+              <a th:href="@{/member-home}" class="button-member" style="text-decoration: none; color: inherit;">
+                  <div><i class="fa-solid fa-book-open-reader"></i>Member</div>
+              </a>
+              
+              <a href="#" class="button-user" style="text-decoration: none; color: inherit;">
+                  <div><i class="fa-solid fa-users"></i>User</div>
+              </a>
+              
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="" style="margin-left: 210px; ">
+        <div class="tieude">
+          <p class="tieude1">Home</p>
+          <p class="tieude2">Welcome admin</p>
+        </div>
+        <div class="data">
+          <a href="" class="theten">
+            <p class="data1">Admin </p>
+            <p class="gach">/</p>
+            <p class="data2">Home </p>
+            <p class="gach">/</p>
+            <p class="data3">Data</p>
+          </a>
+        </div>
+        <div class="dulieutong">
+          <div class="view-tong">
+            <div class="view" style="width: 250px; margin-left: 50px;">
+              <div class="view1">
+                <p class="view01">44,023</p>
+                <p class="view02">DAILY VISITS</p>
+              </div>
+              <div class="view2">
+                <p class="view03"><i class="fa-solid fa-eye"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="shop-tong">
+            <div class="view" style="width: 250px;">
+              <div class="view1">
+                <p class="view01">32,850</p>
+                <p class="view02">SALES</p>
+              </div>
+              <div class="view3">
+                <p class="view03"><i class="fa-solid fa-cart-shopping"></i></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="cmt-tong">
+            <div class="view" style="width: 250px;">
+              <div class="view1">
+                <p class="view01">56,150</p>
+                <p class="view02">COMMENTS</p>
+              </div>
+              <div class="view4">
+                <p class="view03"><i class="fa-solid fa-comments"></i></i></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="user-tong">
+            <div class="view" style="width: 250px;">
+              <div class="view1">
+                <p class="view01">56,150</p>
+                <p class="view02">DAILY PROFITS</p>
+              </div>
+              <div class="view5">
+                <p class="view03"><i class="fa-solid fa-user"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dothi">
+          <div class="dothi-trai" style="width: 600px; margin-left: 10px;">
+            <p class="dothiduong">Line chart</p>
+            <img src="/img/linechart.PNG" alt="" style="width: 90%;">
+          </div>
+          <div class="dothi-phai" style="width: 600px;">
+            <p class="dothicot">Bar chart</p>
+            <img src="/img/barchart.PNG" alt="" style="width: 90%;">
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script th:src="@{/js/ad-home.js}"></script>
+<!-- <script th:src="@{/js/course-home.js}"></script> -->
+<script th:src="@{/js/right.js}"></script>
+
+</html>

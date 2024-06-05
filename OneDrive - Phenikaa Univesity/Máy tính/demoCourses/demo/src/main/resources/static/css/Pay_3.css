@@ -1,0 +1,54 @@
+.top_1 {
+    margin-left: 25%;
+}
+
+.container {
+    background-color: #f0f0f0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.QA img{
+    width: 500px;
+    height: auto;
+    border-radius: 15px;
+}   
+
+.QA {
+    padding-top: 20px;
+}
+
+.chu {
+    color: rgb(70, 70, 70);
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.bottom {
+    padding-bottom: 25px;
+}
+
+.Quaylai {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 220px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+}
+
+.HoanThanh {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 220px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+    margin-left: 15px;
+}

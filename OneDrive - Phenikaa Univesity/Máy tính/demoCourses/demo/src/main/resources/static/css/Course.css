@@ -1,0 +1,265 @@
+body {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    overflow: auto;
+    height: auto;
+}
+
+/* Home */
+.container {
+    display: flex;
+    padding-top: 1%;
+    width: auto;
+}
+
+.logo {
+    padding-right: 5%;
+}
+
+.searchBox {
+    width: auto;
+    padding-top: 0.5%;
+    padding-left: 34%;
+}
+
+.search-container {
+    display: flex;
+    width: 280px;
+    position: relative;
+}
+
+#searchInput {
+    border-radius: 20px;
+    border-color: rgb(105, 154, 228);
+    width: 280px;
+    height: 35px;
+    text-indent: 28px;
+    flex: 1;
+}
+
+.search-container button {
+    border: none;
+    background-color: white;
+}
+
+.search-submit {
+    color: rgb(119, 119, 119);
+    position: absolute;
+    left: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-submit i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.login {
+    display: flex;
+    width: auto;
+}
+ 
+.login a {
+    text-decoration: none;
+}
+
+.active {
+    border: 0px;
+    background-color: aliceblue;
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.active-course {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.active-course p {
+    color: black;
+    margin-top: 7px;
+}
+
+.active-course p:hover {
+    color: rgb(42, 130, 245);
+}
+
+.active-course i {
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.active-course i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.cart {
+    padding: 9px 30px;
+    color: rgb(78, 78, 78);
+}
+
+.cart:hover {
+    color: rgb(42, 130, 245);
+}
+
+.account {
+    width: 200px;
+    margin-top: 7px;
+}
+
+.account-login {
+    font-size: 16px;
+    color: black;
+}
+
+.account-login:hover {
+    color: rgb(42, 130, 245);
+} 
+
+/* evaluate */
+
+.course-hightlight {
+    background-color: #0B3955;
+}
+
+.link {
+    color: #86D1DC;
+    padding-left: 15.5%;
+    font-size: 15px;
+}
+
+.name01 {
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.name02 {
+    color: white;
+    width: 40%;
+}
+
+.text-name {
+    color: white;
+    font-weight: bold;
+}
+
+.course-name {
+    padding-left: 15.5%;
+}
+
+.evaluate {
+    display: flex;
+    padding-left: 15.5%;
+}
+
+.money {
+    margin-left: 10%;
+}
+
+.DanhGia {
+    color: white;
+}
+
+.star {
+    color: orange;
+    ;
+}
+
+/* content */
+
+.content {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+    padding-left: 20%;
+}
+
+.content_container {
+    display: flex;
+}
+
+.content_container_1 {
+    width: 750px;
+    height: auto;
+}
+
+.content_container_1 img {
+    width: 750px;
+}
+
+.content_container_2 {
+    justify-content: left;
+    display: flex;
+    margin-left: 20px;
+    width: auto;
+    height: auto;
+    
+}
+
+.dangkyhoc {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.VND1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.VND2 {
+    margin-left: 5px;
+}
+
+.VND3 {
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.VND4 {
+    color: red;
+    font-weight: 500;
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub1 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fa3131;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.sub2 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #0BB732;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.sub1:hover {
+    background-color: #ff6161;
+}
+
+.sub2:hover {
+    background-color: white;
+    color: #0BB732;
+}

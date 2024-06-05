@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/personal.css}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+    <div class="home-menutop">
+        <div class="container">
+          <div class="logo">
+            <a href="" class="logo-top">
+              <img src="/img/logo.PNG" alt="" class="logo">
+            </a>
+          </div>
+          <div class="searchBox">
+            <form id="searchForm" action="" method="get">
+              <div class="search-container">
+                  <input type="search" id="searchInput" name="q" placeholder="Tìm khóa học, giảng viên...">
+                  <button type="submit">
+                    <a href="" class="search-submit">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                  </button>
+              </div>
+          </form>
+          </div>
+          <div class="login">
+            <div class="active">
+              <a href="" class="active-course">
+                <p class="hidden-xs hiden-sm">Kích hoạt khóa học</p>
+                <i class="fa-solid fa-unlock"></i>
+              </a>
+            </div>
+            <a href="" class="cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <div class="account">
+              <a href="" class="account-login">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+              <div class="submenu">
+                <a href="" class="menu">
+                  <p><i class="fa-solid fa-book"></i> Vào học</p>
+                  <p><i class="fa-solid fa-users"></i> Hội viên</p>
+                  <p><i class="fa-solid fa-book-open-reader"></i> Quản lý học tập</p>
+                  <p><i class="fa-solid fa-clock-rotate-left"></i> Lịch sử đăng ký</p>
+                  <p><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>      
+    </div>
+    <div class="item">
+      <div class="container">
+        <div class="name">
+          <h1>Học viên: <span th:text="${user.name}"></span></h1>
+          <h2>Email: <span th:text="${user.email}"></span></h2>
+        </div>
+        <div class="item-container">
+          <a href="" class="item1"><p class="VaoHoc"><i class="fa-solid fa-book"></i> Vào học</p></a>
+          <a href="" class="item2"><p class="HoiVien"><i class="fa-solid fa-users"></i> Hội viên</p></a>
+          <a href="" class="item3"><p class="QuanLyHocTap"><i class="fa-solid fa-book-open-reader"></i> Quản lý học tập</p></a>
+          <a href="" class="item4"><p class="LichSuDangKy"><i class="fa-solid fa-clock-rotate-left"></i> Lịch sử đăng ký</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="left">
+          <ul>
+            <li><a href=""><img src="/img/logo.PNG" alt=""></a></li>
+            <li><p>Nguyễn Trác, Yên Nghĩa, Hà Đông</p></li>
+            <li><p>0965261897</p></li>
+            <li><p>0839385597</p></li>
+            <li>21011415@st.phenikaa-uni.edu.vn</li>
+            <li>21012514@st.phenikaa-uni.edu.vn</li>
+            <li>8h00 - 17h00, thứ 2-7</li>
+          </ul>
+        </div>
+        <div class="center">
+          <ul>
+            <li class="text_1">Về ITOPP</li>
+            <li><a href="">Giới thiệu về ITOPP</a></li>
+            <li><a href="">Câu hỏi thường gặp</a></li>
+            <li><a href="">Chính sách bảo mật</a></li>
+            <li><a href="">Hướng dẫn thanh toán</a></li>
+            <li><a href="">Kích hoạt khóa học</a></li>
+            <li><a href="">Góc chia sẻ</a></li>
+            <li><a href="">Điều khoản dịch vụ</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li class="text_1">Hợp tác và liên kết</li>
+            <li><a href="">Đăng ký giảng viên</a></li>
+            <li><a href="">Giải pháp e-learning</a></li>
+            <li><a href="">Đào tạo doanh nghiệp</a></li>
+            <li><a href="">Đào tạo Inhouse</a></li>
+            <li><a href="">Affiliate</a></li>
+            <li><a href="">Agency</a></li>
+            <li><a href="">Quay dựng video</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</body>
+<script th:src="@{/js/personal.js}"></script>
+</html>

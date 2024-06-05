@@ -1,0 +1,296 @@
+.body {
+    font-family: "Poppins", sans-serif;
+    max-width: 1600px;
+    height: auto;
+}
+/* name-top */
+.name-top {
+    width: 1355px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.text1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.New {
+    border: 0px ;
+    background-color: #33F8FF;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.New i {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* container */
+.Pay_1 {
+    display: flex;
+    margin-top: 15px;
+}
+
+.Sua {
+    background-color: #FFB240;
+    color: white;
+    display: flex;
+    border: 0px;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.Sua i {
+    margin-top: 11px;
+    margin-left: 11px;
+}
+
+.Sua p {
+    margin-top: 11px;
+    margin-left: 7px;
+}
+
+.Xoa {
+    background-color: #E02B1D;
+    color: white;
+    display: flex;
+    border: 0px;
+    border-radius: 10px;
+    margin-left: 30px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.Xoa i {
+    margin-top: 11px;
+    margin-left: 11px;
+}
+
+.Xoa p {
+    margin-top: 11px;
+    margin-left: 7px;
+}
+
+.container {
+    display: flex;
+}
+
+.course-container {
+    width: auto;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.course-01 {
+    margin: auto;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #d3d3d3;
+	box-shadow: 5px 5px 5px #d3d3d3;
+}
+
+.imfomation .text2 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 50%;
+}
+
+.text-name {
+    display: flex;
+    font-size: 15px;
+}
+
+.text3 {
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.VND {
+    margin-left: 25%;
+    margin-top: 0px;
+}
+
+.VND2 {
+    margin-left: 33%;
+    margin-top: 0px;
+}
+
+.money {
+    display: flex;
+    margin-top: 15px;
+}
+
+.so {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+/* themmoi */
+.themmoi {
+    width: 300px;
+    height: 480px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.image {
+    margin-top: 15px;
+}
+
+#input {
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+#img {
+    max-width: 260px;
+    max-height: 132px;
+    margin: 5px 20px 15px 30px;
+}
+
+.nhap {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.name-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.name-input input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  
+.name-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+  
+.tacgia-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.tacgia-input input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  
+.tacgia-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+
+.gia-input {
+    position: relative;
+    margin: 20px;
+}
+  
+.gia-input input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  
+.gia-input label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+}
+
+.nut {
+    margin-left: 40px;
+}
+
+.huy {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #4764C3;
+    border: 1px solid #4764C3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.huy p {
+    margin-top: 5px;
+}
+
+.xacnhan {
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #4764C3;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.xacnhan p {
+    margin-top: 5px;
+}
+
+#courseForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    display: none; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); 
+    z-index: 999; 
+    display: none; 
+}
+ /* sua */
+
+ 

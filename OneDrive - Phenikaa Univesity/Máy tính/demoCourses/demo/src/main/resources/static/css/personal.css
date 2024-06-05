@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    overflow: auto;
+    height: auto;
+}
+
+/* Home */
+.container {
+    display: flex;
+    padding-top: 1%;
+    width: auto;
+}
+
+.logo {
+    padding-right: 5%;
+}
+
+.searchBox {
+    width: auto;
+    padding-top: 0.5%;
+    padding-left: 34%;
+}
+
+.search-container {
+    display: flex;
+    width: 280px;
+    position: relative;
+}
+
+#searchInput {
+    border-radius: 20px;
+    border-color: rgb(105, 154, 228);
+    width: 280px;
+    height: 35px;
+    text-indent: 28px;
+    flex: 1;
+}
+
+.search-container button {
+    border: none;
+    background-color: white;
+}
+
+.search-submit {
+    color: rgb(119, 119, 119);
+    position: absolute;
+    left: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-submit i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.login {
+    display: flex;
+    width: auto;
+}
+ 
+.login a {
+    text-decoration: none;
+}
+
+.active {
+    border: 0px;
+    background-color: aliceblue;
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.active-course {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.active-course p {
+    color: black;
+    margin-top: 12px;
+}
+
+.active-course p:hover {
+    color: rgb(42, 130, 245);
+}
+
+.active-course i {
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.active-course i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.cart {
+    padding: 10px 30px;
+    color: rgb(78, 78, 78);
+}
+
+.cart:hover {
+    color: rgb(42, 130, 245);
+}
+
+.account {
+    width: 200px;
+    margin-top: 3px;
+}
+
+.account-login {
+    font-size: 25px;
+    color: rgb(63, 63, 63);
+}
+
+.account-login:hover {
+    color: rgb(42, 130, 245);
+} 
+
+.submenu {
+    display: none; 
+    width: 170px;
+    height: 200px;
+    background-color: #F5F5F5;
+    display: none;
+    position: absolute; 
+    z-index: 999; 
+}
+  
+.submenu.show {
+    display: block; 
+}
+
+.account .submenu p {
+    color: rgb(63, 63, 63);
+    padding-left: 10px;
+}
+
+.account .submenu p:nth-child(1) {
+    color: rgb(63, 63, 63);
+    padding-top: 10px;
+}
+
+.account .submenu p:nth-child(5) {
+    color: rgb(63, 63, 63);
+    padding-bottom: 10px;
+}
+
+.account .submenu p:hover{
+    color: rgb(42, 130, 245);
+}
+  
+/* item */
+.item {
+    background-image: url(./image/02.jpg);
+    background-size: cover;
+    width: 90%;
+    height: 150px;
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
+.item .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 23%;
+}
+
+.name {
+    color: white;
+}
+
+.item-container {
+    display: flex;
+    color: white;
+    margin-top: 7px;
+}
+
+.item-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.item-container i {
+    margin-right: 8px;
+}
+
+.item-container p {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item-container p:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.item-container a:nth-child(2) {
+    margin-left: 50px;
+}
+
+.item-container a:nth-child(3) {
+    margin-left: 50px;
+}
+
+.item-container a:nth-child(4) {
+    margin-left: 50px;
+}
+
+
+/* footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 87.8%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content .left,
+.footer-content .center,
+.footer-content .right {
+    flex: 1;
+    text-align: left;
+}
+
+.left ul,
+.center ul,
+.right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left ul li,
+.center ul li,
+.right ul li {
+    margin-bottom: 10px;
+}
+
+.left ul li p,
+.center ul li p,
+.right ul li p {
+    margin: 0;
+}
+
+.left ul li a,
+.center ul li a,
+.right ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.center ul li a:hover,
+.right ul li a:hover {
+    text-decoration: underline;
+    color: #33F8FF;
+}
+
+.footer .text_1 {
+    color: #33F8FF;
+    font-weight: bold;
+    font-size: 24px;
+}

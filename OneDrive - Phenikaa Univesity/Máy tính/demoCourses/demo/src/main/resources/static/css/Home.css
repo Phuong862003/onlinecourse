@@ -1,0 +1,377 @@
+body {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    overflow: auto;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    padding-top: 1%;
+    width: auto;
+}
+
+.logo {
+    padding-right: 5%;
+}
+
+.searchBox {
+    width: auto;
+    padding-top: 0.5%;
+    padding-left: 34%;
+}
+
+.search-container {
+    display: flex;
+    width: 280px;
+    position: relative;
+}
+
+#searchInput {
+    border-radius: 20px;
+    border-color: rgb(105, 154, 228);
+    width: 280px;
+    height: 35px;
+    text-indent: 28px;
+    flex: 1;
+}
+
+.search-container button {
+    border: none;
+    background-color: white;
+}
+
+.search-submit {
+    color: rgb(119, 119, 119);
+    position: absolute;
+    left: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-submit i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.login {
+    display: flex;
+    width: auto;
+}
+ 
+.login a {
+    text-decoration: none;
+}
+
+.active {
+    border: 0px;
+    background-color: aliceblue;
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.active-course {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.active-course p {
+    color: black;
+    margin-top: 7px;
+}
+
+.active-course p:hover {
+    color: rgb(42, 130, 245);
+}
+
+.active-course i {
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.active-course i:hover {
+    color: rgb(42, 130, 245);
+}
+
+.cart {
+    padding: 9px 30px;
+    color: rgb(78, 78, 78);
+}
+
+.cart:hover {
+    color: rgb(42, 130, 245);
+}
+
+.account {
+    width: 200px;
+    margin-top: 7px;
+}
+
+.account-login {
+    font-size: 16px;
+    color: black;
+}
+
+.account-login:hover {
+    color: rgb(42, 130, 245);
+} 
+
+.carousel {
+    width: 91.2%;
+    align-items: center;
+    padding-left: 8.1%;
+    height: auto;
+    padding-top: 10px;
+}
+
+.carousel-item {
+    overflow: hidden;
+    height: 300px;
+  }
+
+.carousel-item img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    text-decoration: none;
+    color: black;
+}
+
+.item:hover {
+    color: rgb(42, 130, 245);
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    margin-top: 10px;
+    padding-bottom: 1%;
+}
+
+.menu {
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding-left: 10px;
+}
+
+.menu-item {
+    position: relative;
+    padding: 5px;
+}
+
+.menu-item:last-child {
+    border-right: none;
+}
+
+.submenu {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.menu-item:hover .submenu {
+    visibility: visible;
+}
+
+.submenu li {
+    padding: 5px;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.menu-item:nth-child(1):hover .submenu {
+    left: -10px;
+    width: 15vh;
+}
+
+.menu-item:nth-child(2):hover .submenu {
+    width: 18vh; 
+}
+
+.menu-item:nth-child(4):hover .submenu {
+    width: 23vh; 
+}
+.menu-item:nth-child(12):hover .submenu {
+    width: 26.7vh; 
+}
+
+.selling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    
+}
+
+.selling-top {
+    align-self: flex-start;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 14%;
+}
+
+.courses-main {
+    display: flex;
+    margin-top: -1%;
+}
+
+.course-container {
+    width: auto;
+    display: flex;
+    margin: 20px;
+}
+
+.course-01 {
+    margin: auto;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #d3d3d3;
+	box-shadow: 5px 5px 5px #d3d3d3;
+}
+
+.imfomation h5 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 50%;
+}
+
+.text-name {
+    display: flex;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.VND {
+    margin-left: 28%;
+}
+
+.money {
+    display: flex;
+    margin: 0;
+}
+
+.target {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.target-top {
+    align-self: flex-start;
+    padding-top: 2%;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 14%;
+}
+
+.target-main {
+    display: flex;
+}
+
+.target-main a {
+    text-decoration: none;
+    color: black;
+}
+
+.target-text  {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding-top: 38.6%;
+    transition: box-shadow 0.3s ease;
+    z-index: 1;
+    background-image: linear-gradient(to bottom,#a4999940 ,#282424);
+    border-radius: 10px;
+}
+
+.target-container:hover .target-text {
+    box-shadow: 0 0 20px rgb(49, 248, 255);
+}
+
+.bgr1 p {
+    color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+}
+
+.target-text img {
+    border-radius: 10px;    
+    width: auto;
+    height: 60px;
+}
+
+.text-item {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.title {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.target-text {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.target-container {
+    background-image: url(./image/backgroup01.png);
+    background-size: cover;
+    width: 65vh;
+    height: 340px;
+    border-radius: 10px;
+}
+
+.target-container01 {
+    background-image: url(./image/backgroup02.png);
+    background-size: cover;
+    width: 65vh;
+    height: 340px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.target-container01:hover .target-text {
+    box-shadow: 0 0 20px rgb(49, 248, 255);
+    
+}
